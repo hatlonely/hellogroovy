@@ -19,6 +19,9 @@ assert "0123456789"[1, 3..<6, 8] == "13458"
 assert "0123456789" == "0123456789"
 assert "0123456789".is("0123456789")
 assert !""
+assert !null
+assert ![]
+assert !0
 
 assert "123456" as Integer == 123456
 assert 123456 as String == "123456"
