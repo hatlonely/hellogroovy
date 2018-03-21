@@ -1,3 +1,5 @@
+#!/usr/bin/env groovy
+
 def add = { a,b -> a+b }
 assert add(1, 2) == 3
 assert add("a", "b") == "ab"

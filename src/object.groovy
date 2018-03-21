@@ -1,3 +1,5 @@
+#!/usr/bin/env groovy
+
 class Person {
 
     String name
