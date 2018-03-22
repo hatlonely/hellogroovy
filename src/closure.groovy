@@ -21,3 +21,19 @@ def times3 = { it * 3 }
 def times3plus2 = plus2 << times3
 assert times3plus2(3) == 11
 assert times3plus2(4) == plus2(times3(4))
+
+// 代理
+class Thing1 {
+    String name
+}
+class Thing2 {
+    String name
+}
+
+def t1 = new Thing1(name: 'Norman')
+def t2 = new Thing2(name: 'Teapot')
+def upperCasedName = { delegate.name.toUpperCase() }
+upperCasedName.delegate = t1
+assert upperCasedName() == 'NORMAN'
+upperCasedName.delegate = t2
+assert upperCasedName() == 'TEAPOT'
